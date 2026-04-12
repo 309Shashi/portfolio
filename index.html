@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shashidhar Reddy | Software Developer</title>
+  <meta
+    name="description"
+    content="Modern portfolio for Shashidhar Reddy featuring software engineering experience, AI systems, projects, education, certifications, and contact details."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#top">
+        <span class="brand-mark">SR</span>
+        <span class="brand-copy">Shashidhar Reddy</span>
+      </a>
+      <nav class="site-nav">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#profile">Profile</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="kicker">Available for Software Engineer roles from May 2026</p>
+          <h1>
+            Building full-stack products,
+            <span>AI workflows, and systems that remove friction.</span>
+          </h1>
+          <p class="hero-text" id="summary"></p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">See Projects</a>
+            <button
+              class="button secondary"
+              id="resume-link"
+              type="button"
+              data-certificate="assets/GKSR_RESUME.pdf"
+              data-title="Resume"
+              data-preview-label="Resume Preview"
+            >
+              View Resume
+            </button>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal">
+          <div class="portrait-card">
+            <img class="portrait-image" src="assets/profile.jpg" alt="Illustrated portrait of Shashidhar Reddy">
+            <div class="portrait-caption">
+              <p class="label">Based in Cincinnati</p>
+              <p>Software developer focused on AI systems, automation, and product-minded engineering.</p>
+            </div>
+          </div>
+          <div class="status-card">
+            <p class="label">Current Focus</p>
+            <h2>Software Developer</h2>
+            <p id="focus-copy"></p>
+          </div>
+          <div class="signal-grid" id="signal-grid"></div>
+        </aside>
+      </section>
+
+      <section class="bento-grid">
+        <article class="bento-card featured reveal" id="profile">
+          <p class="label">Profile</p>
+          <h2>Engineering with AI, automation, and product thinking.</h2>
+          <p id="profile-copy"></p>
+          <div class="chip-row" id="focus-areas"></div>
+        </article>
+
+        <article class="bento-card reveal">
+          <p class="label">Now</p>
+          <h2>University of Cincinnati</h2>
+          <p>Pursuing a Master's in Computer Science while building applied AI and backend systems.</p>
+        </article>
+
+        <article class="bento-card reveal">
+          <p class="label">Strength</p>
+          <h2>From idea to workflow</h2>
+          <p>Comfortable with REST APIs, automation pipelines, data processing, and polished end-user experiences.</p>
+        </article>
+
+        <article class="bento-card accent reveal">
+          <p class="label">Impact</p>
+          <h2>30% less manual reporting effort</h2>
+          <p>Backed by internship work focused on automation, internal productivity, and scalable data workflows.</p>
+        </article>
+      </section>
+
+      <section class="section reveal" id="work">
+        <div class="section-heading">
+          <div>
+            <p class="label">Experience</p>
+            <h2>Work that blends engineering execution with practical outcomes.</h2>
+          </div>
+          <p class="section-copy">A mix of AI implementation, Python automation, backend systems, and team leadership.</p>
+        </div>
+        <div class="timeline" id="experience-list"></div>
+      </section>
+
+      <section class="section reveal" id="projects">
+        <div class="section-heading">
+          <div>
+            <p class="label">Selected Projects</p>
+            <h2>Projects built around verification, analytics, and generative AI.</h2>
+          </div>
+          <p class="section-copy">Each project card focuses on the system, the technical approach, and why it matters.</p>
+        </div>
+        <div class="project-grid" id="project-list"></div>
+      </section>
+
+      <section class="split-layout">
+        <section class="section reveal">
+          <div class="section-heading compact">
+            <div>
+              <p class="label">Education</p>
+              <h2>Academic track</h2>
+            </div>
+          </div>
+          <div class="stack-list" id="education-list"></div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading compact">
+            <div>
+              <p class="label">Certifications</p>
+              <h2>Validated foundations</h2>
+            </div>
+          </div>
+          <div class="stack-list" id="certification-list"></div>
+        </section>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-heading">
+          <div>
+            <p class="label">Stack</p>
+            <h2>Tools for full-stack delivery and AI-powered systems.</h2>
+          </div>
+          <p class="section-copy">Grouped to make your range immediately clear to recruiters and collaborators.</p>
+        </div>
+        <div class="skill-grid" id="skill-list"></div>
+      </section>
+
+      <section class="contact-band reveal" id="contact">
+        <div>
+          <p class="label">Contact</p>
+          <h2>Open to software engineering opportunities and meaningful product work.</h2>
+          <p id="contact-copy"></p>
+        </div>
+        <div class="contact-actions" id="contact-links"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="certificate-modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <div>
+          <p class="label" id="modal-kicker">Certificate Preview</p>
+          <h2 id="modal-title">Certificate</h2>
+        </div>
+        <button class="modal-close" id="modal-close" type="button" aria-label="Close certificate preview">
+          Close
+        </button>
+      </div>
+      <div class="modal-frame-wrap">
+        <iframe
+          id="certificate-frame"
+          class="modal-frame"
+          title="Certificate Preview"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

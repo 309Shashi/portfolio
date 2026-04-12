@@ -218,8 +218,14 @@ function renderProjects() {
   const root = document.getElementById("project-list");
   root.innerHTML = portfolio.projects
     .map(
-      (item) => `
-        <article class="project-card">
+      (item) => {
+        const primaryLink = item.links && item.links.length ? item.links[0] : null;
+        const linkAttributes = primaryLink
+          ? ` data-project-url="${primaryLink.href}" tabindex="0" role="link" aria-label="Open ${item.title}"`
+          : "";
+
+        return `
+        <article class="project-card"${linkAttributes}>
           <p class="label">${item.subtitle}</p>
           <h3>${item.title}</h3>
           <p>${item.description}</p>
@@ -242,9 +248,35 @@ function renderProjects() {
               : ""
           }
         </article>
-      `,
+      `;
+      },
     )
     .join("");
+}
+
+function setupProjectCards() {
+  document.querySelectorAll(".project-card[data-project-url]").forEach((card) => {
+    function openProject() {
+      window.open(card.dataset.projectUrl, "_blank", "noopener,noreferrer");
+    }
+
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a, button")) {
+        return;
+      }
+
+      openProject();
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") {
+        return;
+      }
+
+      event.preventDefault();
+      openProject();
+    });
+  });
 }
 
 function renderStack(listId, items) {
@@ -403,6 +435,7 @@ function init() {
   renderStack("certification-list", portfolio.certifications);
   renderSkills();
   renderContacts();
+  setupProjectCards();
   setupCertificateModal();
   revealOnScroll();
 }

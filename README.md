@@ -12,6 +12,5 @@ This portfolio is a static site built from the resume in `GKSR_RESUME.pdf`.
 ## Next steps
 
 1. Preview the site locally.
-2. Replace the `Live Project` link for Employee Verification System with its final deployed URL.
-3. Deploy the portfolio to `shashii.tech`.
-4. If another project already uses the root domain, move that project to a subdomain like `verify.shashii.tech` or another dedicated URL before pointing `shashii.tech` to this portfolio.
+2. Deploy the portfolio to `shashii.tech`.
+3. Keep the Employee Verification System project card pointed at `https://verify.shashii.tech` if the VerifyPro deployment URL changes.

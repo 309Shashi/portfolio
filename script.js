@@ -79,7 +79,7 @@ const portfolio = {
       ],
     },
     {
-      title: "Traffic Analytics System",
+      title: "RoadSense - Traffic Analytics System",
       subtitle: "Python + YOLOv8 computer vision",
       description:
         "Built a real-time traffic monitoring system that used object detection and density analysis to extract insights from live video streams.",
@@ -88,7 +88,9 @@ const portfolio = {
         "Traffic flow and congestion analysis",
         "Automated data collection and visualization support",
       ],
-      links: [],
+      links: [
+        { label: "Live Project", href: "https://roadsense.shashii.tech" },
+      ],
     },
     {
       title: "Text-to-Visual Presentation Generator",

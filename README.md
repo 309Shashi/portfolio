@@ -1,4 +1,4 @@
-🚀 Shashidhar Reddy Portfolio
+**🚀 Shashidhar Reddy Portfolio**
 
 AI Engineer & Full-Stack Developer focused on building LLM-powered applications, scalable backend systems, and data-driven solutions.
 
